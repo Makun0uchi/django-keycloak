@@ -1,0 +1,5 @@
+Django
+djangorestframework
+django-environ
+psycopg2
+git+https://github.com/Makun0uchi/django-behaviors.git@rename-fields
