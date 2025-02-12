@@ -1,0 +1,14 @@
+[tool.flake8]
+max-line-length = 100
+count = true
+statistics = true
+
+exclude = [
+    '.git',
+    '.gitignore',
+    '__pycache__',
+    'venv',
+    '*/migrations/*',
+    '.env',
+    '.venv',
+]
