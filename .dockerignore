@@ -21,7 +21,7 @@ venv
 *.sqlite3
 
 # Игнорируем файловые и локальные настройки
-**/.env
+src/.env
 .env.local
 .DS_Store
 
