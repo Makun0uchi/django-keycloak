@@ -20,7 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env(
     DEBUG=(bool, False),
 )
-environ.Env.read_env(BASE_DIR / '.env')
+
+envpath = BASE_DIR / '.env'
+
+if envpath.exists():
+    env.read_env(envpath)
 
 
 # Quick-start development settings - unsuitable for production
