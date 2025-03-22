@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -164,4 +166,18 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-outline-success"
     },
     "actions_sticky_top": False
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTStatelessUserAuthentication',
+    ],
+}
+
+KEYCLOAK_BASE_URL = 'http://keycloak:8080/'
+KEYCLOAK_REALM = 'django_integration'
+
+SIMPLE_JWT = {
+    'ALGORITHM': 'RS256',
+    'JWK_URL': f'{KEYCLOAK_BASE_URL}realms/{KEYCLOAK_REALM}/protocol/openid-connect/certs'
 }

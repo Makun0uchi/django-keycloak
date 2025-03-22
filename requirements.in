@@ -5,3 +5,5 @@ psycopg2
 git+https://github.com/Makun0uchi/django-behaviors.git@rename-fields
 whitenoise
 django-jazzmin
+djangorestframework-simplejwt
+cryptography
